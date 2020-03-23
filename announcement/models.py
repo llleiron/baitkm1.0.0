@@ -1,9 +1,9 @@
 from django.db import models
-
+from users.models import User
 # Create your models here.
 
 class Announcement(models.Model):
-    
+    created_by = models.ForeignKey(User, on_delete=models.CASCADE)
     ForSale = "Property for sale"
     ForRent = "Property for rent"
     Property_choices = [(ForSale, "Property for sale"), (ForRent, "Property for rent")]

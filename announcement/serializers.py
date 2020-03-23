@@ -4,7 +4,7 @@ from .models import Announcement
 class AnnouncementCreateSerializer(serializers.ModelSerializer):
     class Meta:
         model = Announcement
-        fields = ['Property_status']
+        fields = ['Property_status', 'created_by']
 class AnnouncementListSerializer(serializers.ModelSerializer):
     class Meta:
         model = Announcement
